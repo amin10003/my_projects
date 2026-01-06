@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text changer</title>
+</head>
+<style>
+    body{
+        background-color:grey;
+        margin:auto;
+        padding:20px;
+        border:none;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        padding-top:100px
+        
+    }
+    h1{
+        color:blue;
+        font-size:40px;
+        font-weight:semi-bold;
+        font-family:serif
+    }
+    #textChange{
+        width:100vh;
+        height:co;
+        background-color:white;
+        border:none;
+        margin:auto;
+        padding:20px;
+        border-radius:20px;
+        align-items:center;
+        align-content:center;
+        
+   }
+   #textChange h2{
+    text-align: center;
+    font-size:30px;
+    text-decoration:underline;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+   }
+
+    p{
+    
+     font-size:25px;
+     line-height: 1.6;
+    }
+    button{
+        background-color:rgb(10, 10, 231);
+        color:white;
+        height:40px;
+        width:content-fix;
+        border-radius: 6px;
+        padding-top:2px;
+        padding-bottom:2px;
+        font-size:14px
+    }
+    button:hover{
+        background-color: rgb(14, 14, 138)
+    }
+</style>
+<body>
+    <h1>Let's change the text</h1>
+    <div id="textChange">
+        <h2>Professional Profile</h2>
+       <p>Junior Frontend Developer at LUUL Solutions with a focus on building responsive, user-centric web applications. Proficient in React, TypeScript, and Tailwind CSS, with practical experience in Node.js and SQL. I specialize in translating Figma designs into clean, maintainable code and ensuring quality through Jest testing. A self-starter and bootcamp graduate, I am actively seeking a Nairobi-based internship to contribute to innovative projects while further advancing my technical expertise in the frontend ecosystem.</p>
+<button id="butt" onclick="changeTheText()">change the text</button>
+    </div>
+
+    <script>
+        console.log('Am I A Live')
+        const dif = document.querySelector('#textChange p')
+        const but = document.getElementById('butt')
+        const originalText = dif.textContent
+        const newText = 'My technical expertise focuses on building high-performance applications using React, React Native, and TypeScript. I am proficient in Tailwind CSS for responsive design and managing application state via Redux and Context API. My background includes Node.js and MySQL for backend integration and database management. I ensure code reliability through Jest testing and Git version control, while specializing in converting Figma designs into clean, semantic code within Linux environments.'
+
+        let isChanged = false
+        but.addEventListener('click',() => {
+            if(isChanged){
+                dif.textContent = originalText
+            }else{
+               dif.textContent = newText
+            }
+            
+            isChanged = !isChanged
+        })
+    </script>
+</body>
+</html>
