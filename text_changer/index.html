@@ -75,16 +75,18 @@
     <script>
         console.log('Am I A Live')
         const dif = document.querySelector('#textChange p')
+         const h2 = document.querySelector('#textChange h2')
         const but = document.getElementById('butt')
         const originalText = dif.textContent
         const newText = 'My technical expertise focuses on building high-performance applications using React, React Native, and TypeScript. I am proficient in Tailwind CSS for responsive design and managing application state via Redux and Context API. My background includes Node.js and MySQL for backend integration and database management. I ensure code reliability through Jest testing and Git version control, while specializing in converting Figma designs into clean, semantic code within Linux environments.'
-
+        const h2OriginalText = h2.textContent
+        const h2NewText = 'Technical Skills & Expertise'
         let isChanged = false
         but.addEventListener('click',() => {
             if(isChanged){
-                dif.textContent = originalText
+                (dif.textContent = originalText) && (h2.textContent = h2OriginalText)
             }else{
-               dif.textContent = newText
+               (dif.textContent = newText) && (h2.textContent = h2NewText)
             }
             
             isChanged = !isChanged
