@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Chnager</title>
+    <style>
+            body{
+                background-color:grey;
+                color:#000;
+                margin:0px;
+                padding-top:100px;
+                 display:flex;
+                flex-direction:column;
+                z-index:-1
+            }
+            img{
+            height:400px;
+            width:400px;
+            border:none;
+            border-radius:16px
+        }
+        button{
+            background-color: rgb(46, 46, 201);
+            border-radius:5px;
+            height:40px;
+            width:200px;
+            color:white;
+            display:block;
+        }
+        button:hover,
+        button:focus{
+            background-color:rgb(23, 23, 118)
+        }
+        .main{
+
+            height:conten-fit;
+            width:content-fit;
+            margin:auto;
+            padding:20px;
+            border:none;
+            background-color:#fff;
+            margin-bottom:30px;
+            border-radius:10px;
+            z-index:1;
+            display:flex;
+            flex-direction:column;
+           align-items:center;
+           text-transform:capitalize
+        }
+        .main button{
+            margin-top:20px;
+            font-size:20px;
+            text-transform:capitalize;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>let's Change The image</h1>
+    <img id="pict" src="img/suit.png" alt="myFirstImage"/>
+    <button>click to change</button>
+    </div>
+
+
+
+    <script>
+        const swr = document.querySelector('img');
+        const but = document.querySelector("button");
+
+        const firstSwr = "img/suit.png";
+        const secondSwr = "img/mySecond.jpg"
+
+        let isChanged = false;
+
+        but.addEventListener('click', () => {
+            if(isChanged){
+                swr.src = firstSwr
+            } else{
+                swr.src = secondSwr
+            }
+
+            isChanged = !isChanged
+        })
+    </script>
+
+    
+</body>
+
+</html>
