@@ -23,7 +23,7 @@ buttn.addEventListener('click', () => {
 
 
         defaultText.forEach((el) => el.style.display = 'block')
-        hiddenText.forEach((hT)=> hT.style.display = 'none')
+     hiddenText.forEach((hT)=> hT.style.display = 'none')
     }else{
         maindivelem.className = "Secondary-class"
 
